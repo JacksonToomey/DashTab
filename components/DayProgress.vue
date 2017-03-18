@@ -1,6 +1,8 @@
 <template>
-    <div class="current-time">
-        {{ progress }}%
+    <div class="day-progress">
+        <div
+        class="progress-display"
+        :style="{width: progress + '%'}"></div>
     </div>
 </template>
 
@@ -34,4 +36,17 @@ export default {
 </script>
 
 <style lang="scss">
+.day-progress {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 5px;
+    border-bottom: 1px solid;
+
+    .progress-display {
+        width: 0%;
+        background-color: black;
+        height: inherit;
+    }
+}
 </style>

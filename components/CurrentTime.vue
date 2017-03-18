@@ -18,4 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
+.current-time {
+    font-size: 2em;
+}
 </style>

@@ -19,6 +19,7 @@ const loadWeather = store => {
         var expiration = store.state.now._current.clone().add(2, 'hours').unix();
         var payload = {
             data: resp.data,
+            location: zip,
             expiration
         }
         store.commit('loadWeather', payload);
@@ -62,6 +63,16 @@ const weatherPlugin  = store => {
             loadWeather(store);
         }
     }, 1800000)
+
+    store.subscribe((mutation, state) => {
+        switch(mutation.type) {
+            case 'setLocation':
+                if(state.weather.location != state.settings.location) {
+                    loadWeather(store);
+                }
+                break;
+        }
+    });
 };
 
 export default weatherPlugin;

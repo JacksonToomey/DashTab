@@ -1,6 +1,6 @@
 <template>
     <div class="weather">
-        {{ weather }}
+        <span v-html="weather"></span>
     </div>
 </template>
 
@@ -15,12 +15,22 @@ export default {
                 return null;
             }
             var temp = state.weather.weatherData.main.temp;
-            return Math.round((temp * (9/5)) - 459.67);
-        }
+            if(state.settings.weatherUnit == 'fahrenheit') {
+                let tempVal = Math.round((temp * (9/5)) - 459.67);
+                return tempVal.toString() + '&#x000B0;F';
+            }
+            else {
+                let tempVal = Math.round(temp - 273.15);
+                return tempVal.toString() + '&#x000B0;C';
+            }
+        },
     })
 }
 
 </script>
 
 <style lang="scss">
+.weather {
+    font-size: 2em;
+}
 </style>
