@@ -13,6 +13,7 @@ export default {
             minute: 30
         },
         timezone: 'America/New_York',
-        weatherUnits: 'imperial',
+        weatherUnits: 'fahrenheit',
+        location: '22314',
     },
 }
