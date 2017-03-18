@@ -11,10 +11,10 @@ import moment from 'moment-timezone';
 
 export default {
     computed: mapState({
-        progress: state => {
+        progress(state) {
             var startTime = moment.tz(state.settings.startTime, state.settings.timezone);
             var endTime = moment.tz(state.settings.endTime, state.settings.timezone);
-            var now = state.now.currentTime.tz(state.settings.timezone);
+            var now = this.$store.getters.currentTime;
             if( now > endTime ) {
                 return 100;
             }
@@ -23,7 +23,7 @@ export default {
                 return 0;
             }
             var total = endTime - startTime;
-            var current = endTime - now;
+            var current = now - startTime;
             var percent = current / total;
             percent = percent * 100;
             return Math.round( percent );

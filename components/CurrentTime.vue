@@ -1,17 +1,17 @@
 <template>
     <div class="current-time">
-        {{ now.format() }}
+        {{ now.format('h:mmA') }}
     </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 import moment from 'moment-timezone';
 
 
 export default {
-    computed: mapState({
-        now: state => state.now.currentTime.tz(state.settings.timezone)
+    computed: mapGetters({
+        now: 'currentTime'
     })
 }
 

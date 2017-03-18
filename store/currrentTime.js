@@ -3,11 +3,17 @@ import moment from 'moment-timezone';
 
 export default {
     state: {
-        currentTime: moment()
+        _current: moment()
+    },
+    getters: {
+        currentTime(state, getters, rootState) {
+            // moment.tz.setDefault(rootState.settings.timezone);
+            return state._current.tz(rootState.settings.timezone);
+        }
     },
     mutations: {
         updateTime(state) {
-            state.currentTime = moment()
+            state._current = moment()
         }
     }
 }
