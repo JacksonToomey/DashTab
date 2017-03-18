@@ -7,7 +7,6 @@ export default {
     },
     getters: {
         currentTime(state, getters, rootState) {
-            // moment.tz.setDefault(rootState.settings.timezone);
             return state._current.tz(rootState.settings.timezone);
         }
     },

@@ -1,5 +1,6 @@
 import moment from 'moment-timezone';
 
+moment.tz.setDefault('UTC');
 
 export default {
     state: {
@@ -11,6 +12,7 @@ export default {
             hour: 17,
             minute: 30
         },
-        timezone: 'America/New_York'
+        timezone: 'America/New_York',
+        weatherUnits: 'imperial',
     },
 }
