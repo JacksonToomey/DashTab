@@ -1,9 +1,13 @@
 <template>
     <div class="settings">
-        <span class="setting-button" @click="show">Settings</span>
+        <span class="setting-button button" @click="show">
+            <i class="mdi mdi-settings"></i>Settings
+        </span>
         <div :class="[visible ? '' : 'hidden', 'settings-page']">
             <span class="settings-title">Settings page</span>
-            <span class="close" @click="hide">Close</span>
+            <span class="close button" @click="hide">
+                <i class="mdi mdi-close"></i>Close
+            </span>
             <div class="settings-values">
                 <div class="settings-value">
                     <span class="value-name">
@@ -68,10 +72,6 @@ export default {
 </script>
 
 <style lang="scss">
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
 .settings {
     position: fixed;
     top: 0;
@@ -87,7 +87,6 @@ export default {
         left: 0;
         background: white;
         height: 100vh;
-        animation: fadeIn 150ms;
 
         &.hidden {
             display: none;

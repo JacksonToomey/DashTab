@@ -39,6 +39,16 @@ import Settings from './components/Settings.vue';
      margin: 0;
  }
 
+ .button {
+    padding: 10px;
+    transition: background-color 150ms, box-shaddow 150ms, color 150ms;
+     &:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 3px 3px 3px #afafaf;
+     }
+ }
+
  body {
     font-size: 2em;
     font-family: Candara,Calibri,Segoe,'Segoe UI',Optima,Arial,sans-serif;
