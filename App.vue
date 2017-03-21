@@ -51,7 +51,7 @@ import Settings from './components/Settings.vue';
 
  body {
     font-size: 2em;
-    font-family: Candara,Calibri,Segoe,'Segoe UI',Optima,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     .app-main {
          text-align: center;
          margin-top: 40px;

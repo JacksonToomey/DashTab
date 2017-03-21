@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss">
 .day-progress {
-    width: 60%;
+    width: 30%;
     margin-right: auto;
     margin-left: auto;
     height: 5px;
