@@ -6,7 +6,15 @@ var path = require('path');
 module.exports = {
     entry: {
         "main": "./main.jsx",
-        vendor: ['react', 'react-dom']
+        vendor: [
+          'react',
+          'react-dom',
+          'redux',
+          'react-redux',
+          'immutable',
+          'redux-thunk',
+          'reselect',
+        ]
     },
     output: {
         path: path.join(__dirname, 'static/js'),
