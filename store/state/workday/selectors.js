@@ -22,7 +22,6 @@ export const getTotalMinutes = createSelector(
 export const getPassedMinutes = createSelector(
     [getStartHour, getStartMinute, getEndHour, getEndMinute, getTime],
     (startHour, startMinute, endHour, endMinute, time) => {
-        console.log(time.getFullYear());
         let start = new Date(
             time.getFullYear(),
             time.getMonth(),

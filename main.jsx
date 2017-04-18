@@ -7,6 +7,9 @@ import { startTick } from './store/middleware/tick/actions';
 
 import Time from './containers/Time';
 import Progress from './containers/Progress';
+import Reminders from './containers/Reminders';
+import Notes from './containers/Notes';
+import Transit from './containers/Transit';
 
 import './app.scss';
 
@@ -14,8 +17,11 @@ import './app.scss';
 ReactDOM.render(
     <Provider store={store}>
         <div>
-        <Time />
-        <Progress />
+            <Time />
+            <Progress />
+            <Reminders />
+            <Notes />
+            <Transit />
         </div>
     </Provider>
     ,
