@@ -16,6 +16,10 @@ export default (state = new State(), action) => {
                     return n;
                 })
             })
+        case types.DELETE_NOTE:
+            return state.withMutations(s => {
+                return s.update('notes', n => n.delete(action.payload));
+            })
         default:
             return state;
     }

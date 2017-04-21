@@ -3,7 +3,8 @@ import React from 'react';
 
 export default ({
     note,
-    onChange
+    onChange,
+    onDelete,
 }) => {
     return (
         <div className="note-display">
@@ -15,6 +16,14 @@ export default ({
                     }
                 }}>
             </textarea>
+            <button
+                onClick={() => {
+                    if(onDelete) {
+                        onDelete();
+                    }
+                }}>
+                Delete
+            </button>
         </div>
     )
 }

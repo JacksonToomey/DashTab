@@ -5,13 +5,14 @@ import Note from '../components/Note';
 
 import { getNotes } from '../store/state/notes/selectors';
 
-import { addNote, updateNote } from '../store/state/notes/actions';
+import { addNote, updateNote, deleteNote } from '../store/state/notes/actions';
 
 
 const Comp = ({
     notes,
     add,
     update,
+    remove
 }) => {
     return (
         <div className="notes-display">
@@ -22,6 +23,9 @@ const Comp = ({
                         note={ n }
                         onChange={t => {
                             update(k, t);
+                        }}
+                        onDelete={() => {
+                            remove(k);
                         }}
                         key={ k } />
                 )
@@ -40,6 +44,9 @@ const mapDispatchToProps = dispatch => ({
     },
     update: (index, text) => {
         dispatch(updateNote(index, text));
+    },
+    remove: index => {
+        dispatch(deleteNote(index));
     }
 })
 

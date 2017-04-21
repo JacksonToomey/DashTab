@@ -12,4 +12,9 @@ export const updateNote = (index, text) => ({
         index,
         text,
     }
+});
+
+export const deleteNote = index => ({
+    type: types.DELETE_NOTE,
+    payload: index,
 })

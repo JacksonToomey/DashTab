@@ -7,7 +7,6 @@ import { startTick } from './store/middleware/tick/actions';
 
 import Time from './containers/Time';
 import Progress from './containers/Progress';
-import Reminders from './containers/Reminders';
 import Notes from './containers/Notes';
 import Transit from './containers/Transit';
 
@@ -19,7 +18,6 @@ ReactDOM.render(
         <div>
             <Time />
             <Progress />
-            <Reminders />
             <Notes />
             <Transit />
         </div>
