@@ -6,5 +6,5 @@ export const Note = Record({
 })
 
 export default Record({
-    notes: List()
+    notes: List([new Note()])
 });

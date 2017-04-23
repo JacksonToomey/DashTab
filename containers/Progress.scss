@@ -1,0 +1,9 @@
+.progress-display {
+    height: 15px;
+
+    .progress-amount {
+        width: 0;
+        height: inherit;
+        background-color: black;
+    }
+}

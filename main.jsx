@@ -15,11 +15,17 @@ import './app.scss';
 
 ReactDOM.render(
     <Provider store={store}>
-        <div>
-            <Time />
-            <Progress />
-            <Notes />
-            <Transit />
+        <div className="dash-tab-app">
+            <div className="dash-widget">
+                <Notes />
+            </div>
+            <div className="dash-widget">
+                <Time />
+                <Progress />
+            </div>
+            <div className="dash-widget">
+                <Transit />
+            </div>
         </div>
     </Provider>
     ,

@@ -8,6 +8,7 @@ const Comp = ({
 }) => {
     return (
         <div className="transit-display">
+            <h2>Train Times</h2>
             {trains.map((train, key) => {
                 return (
                     <TrainTime key={ key } train={ train }/>

@@ -16,10 +16,11 @@ const Comp = ({
 }) => {
     return (
         <div className="notes-display">
-            <button onClick={ add }>Add Note</button>
+            <h2>Notes</h2>
             {notes.map((n, k) => {
                 return (
                     <Note
+                        onEnter={ add }
                         note={ n }
                         onChange={t => {
                             update(k, t);

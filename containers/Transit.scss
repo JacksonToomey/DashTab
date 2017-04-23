@@ -1,0 +1,19 @@
+.transit-display {
+
+    .train-time-display {
+        padding: 30px 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        font-size: 18px;
+
+        .destination {
+
+        }
+
+        .minutes {
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+}

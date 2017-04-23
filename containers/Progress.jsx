@@ -7,9 +7,12 @@ const Comp = ({
     total,
     passed,
 }) => {
-    let percent = Math.round(passed / total * 100)
+    let percent = Math.round(passed / total * 100);
+    let width = percent.toString() + '%';
     return (
-        <div className="progress-display">{ passed } of { total } { percent }%</div>
+        <div className="progress-display">
+            <div className="progress-amount" style={ { width } }></div>
+        </div>
     )
 }
 
