@@ -1,0 +1,3 @@
+const PREFIX = 'DASHTAB_TRANSIT/';
+
+export const SET_TRAIN_TIMES = PREFIX + 'SET_TRAIN_TIMES';

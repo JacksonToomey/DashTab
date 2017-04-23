@@ -14,6 +14,7 @@ module.exports = {
           'immutable',
           'redux-thunk',
           'reselect',
+          'superagent',
         ]
     },
     output: {

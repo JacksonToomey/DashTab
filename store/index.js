@@ -12,7 +12,8 @@ import transit from './state/transit';
 let reducer = combineReducers({
     time,
     workday,
-    notes
+    notes,
+    transit,
 })
 export default createStore(
     reducer,
