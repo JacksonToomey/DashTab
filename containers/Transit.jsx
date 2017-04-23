@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import TrainTime from '../components/TrainTime';
 
 const Comp = ({
     trains,
@@ -9,9 +10,7 @@ const Comp = ({
         <div className="transit-display">
             {trains.map((train, key) => {
                 return (
-                    <div key={key} >
-                        { train.get('DestinationName') } - { train.get('Min') } - { train.get('Line') }
-                    </div>
+                    <TrainTime key={ key } train={ train }/>
                 )
             })}
         </div>
