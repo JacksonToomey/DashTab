@@ -16,15 +16,23 @@ import './app.scss';
 ReactDOM.render(
     <Provider store={store}>
         <div className="dash-tab-app">
-            <div className="dash-widget">
-                <Notes />
+            <div className="row">
+                <div className="col s12">
+                    <Time />
+                    <Progress />
+                </div>
             </div>
-            <div className="dash-widget">
-                <Time />
-                <Progress />
-            </div>
-            <div className="dash-widget">
-                <Transit />
+            <div className="row">
+                <div className="dash-widget col s6">
+                    <div className="wrapper z-depth-1">
+                        <Notes />
+                    </div>
+                </div>
+                <div className="dash-widget col s6">
+                    <div className="wrapper z-depth-1">
+                        <Transit />
+                    </div>
+                </div>
             </div>
         </div>
     </Provider>

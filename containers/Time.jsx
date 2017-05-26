@@ -21,7 +21,9 @@ const Comp = ({
         minutes = '0' + minutes.toString();
     }
     return (
-        <div className="time-display">{ hours }:{ minutes }{ ampm }</div>
+        <div className="valign-wrapper dashtab-time">
+            <h1 className="time-display center-align">{ hours }:{ minutes }{ ampm }</h1>
+        </div>
     )
 }
 

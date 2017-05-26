@@ -78,19 +78,19 @@ const ROSSLYN_CODE = 'C05';
 export default store => next => action => {
 
     if(action.type == 'START_TICK') {
-        // request.get('https://api.wmata.com/StationPrediction.svc/json/GetPrediction/' + ROSSLYN_CODE)
-        // .set({api_key: WMATA})
-        // .then(resp => {
-        //   store.dispatch(setTrainTimes(resp.body.Trains));
-        // });
+        request.get('https://api.wmata.com/StationPrediction.svc/json/GetPrediction/' + ROSSLYN_CODE)
+        .set({api_key: WMATA})
+        .then(resp => {
+          store.dispatch(setTrainTimes(resp.body.Trains));
+        });
         store.dispatch(setTrainTimes(example.Trains));
         setInterval(() => {
-          // request.get('https://api.wmata.com/StationPrediction.svc/json/GetPrediction/' + ROSSLYN_CODE)
-          // .set({api_key: WMATA})
-          // .then(resp => {
-          //   store.dispatch(setTrainTimes(resp.body.Trains));
-          // });
-          store.dispatch(setTrainTimes(example.Trains));
+          request.get('https://api.wmata.com/StationPrediction.svc/json/GetPrediction/' + ROSSLYN_CODE)
+          .set({api_key: WMATA})
+          .then(resp => {
+            store.dispatch(setTrainTimes(resp.body.Trains));
+          });
+          // store.dispatch(setTrainTimes(example.Trains));
         }, 60000)
     }
     return next(action);
