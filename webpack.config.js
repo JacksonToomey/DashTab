@@ -15,6 +15,7 @@ module.exports = {
           'redux-thunk',
           'reselect',
           'superagent',
+          'localforage',
         ]
     },
     output: {

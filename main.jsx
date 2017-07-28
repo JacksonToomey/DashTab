@@ -4,11 +4,12 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 import { startTick } from './store/middleware/tick/actions';
+import { addTodo } from './store/state/todos/actions';
 
 import Time from './containers/Time';
 import Progress from './containers/Progress';
-import Notes from './containers/Notes';
 import Transit from './containers/Transit';
+import Todos from './containers/Todos';
 
 import './app.scss';
 
@@ -25,7 +26,7 @@ ReactDOM.render(
             <div className="row">
                 <div className="dash-widget col s6">
                     <div className="wrapper z-depth-1">
-                        <Notes />
+                        <Todos />
                     </div>
                 </div>
                 <div className="dash-widget col s6">

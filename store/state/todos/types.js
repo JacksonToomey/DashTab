@@ -1,0 +1,6 @@
+const PREFIX = 'DASHTAB_TODOS/';
+
+export const LOAD_TODOS = PREFIX + 'LOAD_TODOS';
+export const ADD_TODO = PREFIX + 'ADD_TODO';
+export const COMPLETE_TODO = PREFIX + 'COMPLETE_TODO';
+export const REMOVE_TODO = PREFIX + 'REMOVE_TODO';

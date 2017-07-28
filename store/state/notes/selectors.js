@@ -1,1 +1,0 @@
-export const getNotes = ({ notes }) => notes.get('notes');
