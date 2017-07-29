@@ -1,0 +1,11 @@
+.dashtab-todo {
+    i {
+        cursor: pointer;
+    }
+    &.complete {
+        color: #c0c0c0;
+        div.description {
+            text-decoration: line-through;
+        }
+    }
+}

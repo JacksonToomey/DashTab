@@ -5,6 +5,7 @@
 .dash-tab-app {
     @import './containers/Time.scss';
 
+    @import './components/Todo.scss';
     .dash-widget .wrapper {
         padding: 30px;
     }

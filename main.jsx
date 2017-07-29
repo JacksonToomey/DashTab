@@ -25,12 +25,12 @@ ReactDOM.render(
             </div>
             <div className="row">
                 <div className="dash-widget col s6">
-                    <div className="wrapper z-depth-1">
+                    <div className="wrapper">
                         <Todos />
                     </div>
                 </div>
                 <div className="dash-widget col s6">
-                    <div className="wrapper z-depth-1">
+                    <div className="wrapper">
                         <Transit />
                     </div>
                 </div>

@@ -9,17 +9,19 @@ const Todo = ({
     onDeleteClick,
 }) => {
     let icon = 'check_box_outline_blank';
+    let className = 'row dashtab-todo';
     if(todo.get('complete')) {
         icon = 'check_box';
+        className = className + ' complete'
     }
     return (
-        <div className="row dashtab-todo">
+        <div className={ className }>
             <div className="col s1">
                 <i className="material-icons" onClick={() => { onCheckClick(todo.get('id')); }}>
                     { icon }
                 </i>
             </div>
-            <div className="col s10">
+            <div className="col s10 description">
                 { todo.get('description') }
             </div>
             <div className="col s1">
